@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static '/css/style.css' %}" type="text/css">
+    <title>Wybory Prezydenta Rzeczypospolitej Polskiej 2000</title>
+</head>
+<body BGCOLOR=White TOPMARGIN=0 MARGINHEIGHT=0 LEFTMARGIN=0 MARGINWIDTH=0>
+
+<div class="header_all">
+
+    <div>
+        <div class="header-element">
+            <a href="index.html"><img src="../static/obrazy/l.gif" width=337 height=87 border=0></a>
+        </div>
+        <div class="header-element2"><img class="aaa" src="../static/obrazy/n5.gif"></div>
+    </div>
+    <div class="line1">&nbsp;</div>
+    <div class="line2">&nbsp;</div>
+    <div class="line3">&nbsp;</div>
+</div>
+
+
+<div class="main">
+
+    <a class="my_text" href="./index.html">Polska</a>
+    <div class="line2">&nbsp;</div>
+
+
+    <ul class="menu">
+        <li><a class="link" href="http://prezydent2000.pkw.gov.pl/so/so.html">Wyniki głosowania - statystyki ogólne</a></li>
+		<li><a class="link" href="http://prezydent2000.pkw.gov.pl/zw/wb_zw.html">Wyniki głosowania - zwycięski kandydat</a></li>
+        <li><a class="link" href="http://prezydent2000.pkw.gov.pl/wb/wb_wgobwodu.html">Wyniki głosowania według rodzaju obwodu</a></li>
+        <li><a class="link" href="http://prezydent2000.pkw.gov.pl/wb/wb_wgzam.html">Wyniki głosowania w mieście i na wsi</a></li>
+        <li><a class="link" href="http://prezydent2000.pkw.gov.pl/wb/wb_zagranica.html">Wyniki głosowania za granicą        -</a></li>
+    </ul>
+
+    <p>Procentowa liczba głosów dla poszczególnych kandydatów</p>
+    <div class="line2">&nbsp;</div>
+
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+              ['kandydat', 'procent głosów'],
+              ['Work', 11],
+              ['Eat', 2],
+              ['Commute', 2],
+              ['Watch TV', 2],
+              ['Sleep', 7]
+          ]);
+
+          var options = {
+              is3D: true
+          };
+
+          var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+          chart.draw(data, options);
+      }
+
+    </script>
+    <div id="piechart_3d" style="width: 900px; height: 400px;"></div>
+
+            <center><img src="../static/obrazy/kd.png" border=0></center>
+            <br>
+            <table width=100% height=45 cellspacing=0 cellpadding=0 border=0>
+                <tr>
+                    <td height=40 width=30><img src="../static/obrazy/p.gif" width=30 height=40></td>
+                    <td width=100% height=40 id=h0>Wyniki poszczeg�lnych kandydat�w</td>
+                </tr>
+                <tr>
+                    <td colspan=2 height=13 background="../static/obrazy/linia.gif" id=p>&nbsp;</td>
+                </tr>
+            </table>
+
+            <table width=100% border=0 cellspacing=2 cellpadding=1 align=center>
+                <tr>
+                    <td><img src="../static/obrazy/p.gif" width=30 height=1></td>
+                    <td width=100%>
+
+                        <table width=100% border=0 cellspacing=2 cellpadding=1 align=center>
+                            <tr valign=bottom>
+                                <td id=t>Kandydat</td>
+                                <td id=t>Liczba g�os�w oddanych na kandydata</td>
+                                <td id=t>Liczba wszystkich wa�nych g�os�w</td>
+                                <td id=t>Procentowa liczba g�os�w oddanych na kandydata</td>
+                            </tr>
+                            <tr>
+                                <td colspan=4><img src="../static/obrazy/p.gif" width=1 height=1></td>
+                            </tr>
+                            <tr>
+                                <td bgcolor=#ff0000 colspan=4><img src="../static/obrazy/p.gif" width=1 height=1></td>
+                            </tr>
+                            <tr>
+                                <td colspan=4><img src="../static/obrazy/p.gif" width=1 height=1></td>
+                            </tr>
+                            <tr>
+                                <td id=t8><b><a href="http://prezydent2000.pkw.gov.pl/kd/grabowski_dariusz/wb_kd.html">GRABOWSKI
+                                    Dariusz</b></td>
+                                <td align=right id=s8> 89 002</td>
+                                <td align=right id=s8> 17 598 919</td>
+                                <td align=right id=s8> 0,51</td>
+                            </tr>
+                            <tr>
+                                <td id=t8><b><a href="http://prezydent2000.pkw.gov.pl/kd/ikonowicz_piotr/wb_kd.html">IKONOWICZ
+                                    Piotr</b></td>
+                                <td align=right id=s8> 38 672</td>
+                                <td align=right id=s8> 17 598 919</td>
+                                <td align=right id=s8> 0,22</td>
+                            </tr>
+                            <tr>
+                                <td id=t8><b><a
+                                        href="http://prezydent2000.pkw.gov.pl/kd/kalinowski_jaroslaw/wb_kd.html">KALINOWSKI
+                                    Jaros�aw</b></td>
+                                <td align=right id=s8> 1 047 949</td>
+                                <td align=right id=s8> 17 598 919</td>
+                                <td align=right id=s8> 5,95</td>
+                            </tr>
+                            <tr>
+                                <td id=t8><b><a
+                                        href="http://prezydent2000.pkw.gov.pl/kd/korwin-mikke_janusz/wb_kd.html">KORWIN-MIKKE
+                                    Janusz</b></td>
+                                <td align=right id=s8> 252 499</td>
+                                <td align=right id=s8> 17 598 919</td>
+                                <td align=right id=s8> 1,43</td>
+                            </tr>
+                            <tr>
+                                <td id=t8><b><a href="http://prezydent2000.pkw.gov.pl/kd/krzaklewski_marian/wb_kd.html">KRZAKLEWSKI
+                                    Marian</b></td>
+                                <td align=right id=s8> 2 739 621</td>
+                                <td align=right id=s8> 17 598 919</td>
+                                <td align=right id=s8> 15,57</td>
+                            </tr>
+                            <tr>
+                                <td id=t8><b><a
+                                        href="http://prezydent2000.pkw.gov.pl/kd/kwasniewski_aleksander/wb_kd.html">KWA�NIEWSKI
+                                    Aleksander</b></td>
+                                <td align=right id=s8> 9 485 224</td>
+                                <td align=right id=s8> 17 598 919</td>
+                                <td align=right id=s8> 53,90</td>
+                            </tr>
+                            <tr>
+                                <td id=t8><b><a href="http://prezydent2000.pkw.gov.pl/kd/lepper_andrzej/wb_kd.html">LEPPER
+                                    Andrzej</b></td>
+                                <td align=right id=s8> 537 570</td>
+                                <td align=right id=s8> 17 598 919</td>
+                                <td align=right id=s8> 3,05</td>
+                            </tr>
+                            <tr>
+                                <td id=t8><b><a href="http://prezydent2000.pkw.gov.pl/kd/lopuszanski_jan/wb_kd.html">�OPUSZA�SKI
+                                    Jan</b></td>
+                                <td align=right id=s8> 139 682</td>
+                                <td align=right id=s8> 17 598 919</td>
+                                <td align=right id=s8> 0,79</td>
+                            </tr>
+                            <tr>
+                                <td id=t8><b><a href="http://prezydent2000.pkw.gov.pl/kd/olechowski_andrzej/wb_kd.html">OLECHOWSKI
+                                    Andrzej</b></td>
+                                <td align=right id=s8> 3 044 141</td>
+                                <td align=right id=s8> 17 598 919</td>
+                                <td align=right id=s8> 17,30</td>
+                            </tr>
+                            <tr>
+                                <td id=t8><b><a href="http://prezydent2000.pkw.gov.pl/kd/pawlowski_bogdan/wb_kd.html">PAW�OWSKI
+                                    Bogdan</b></td>
+                                <td align=right id=s8> 17 164</td>
+                                <td align=right id=s8> 17 598 919</td>
+                                <td align=right id=s8> 0,10</td>
+                            </tr>
+                            <tr>
+                                <td id=t8><b><a href="http://prezydent2000.pkw.gov.pl/kd/walesa_lech/wb_kd.html">WA��SA
+                                    Lech</b></td>
+                                <td align=right id=s8> 178 590</td>
+                                <td align=right id=s8> 17 598 919</td>
+                                <td align=right id=s8> 1,01</td>
+                            </tr>
+                            <tr>
+                                <td id=t8><b><a href="http://prezydent2000.pkw.gov.pl/kd/wilecki_tadeusz/wb_kd.html">WILECKI
+                                    Tadeusz</b></td>
+                                <td align=right id=s8> 28 805</td>
+                                <td align=right id=s8> 17 598 919</td>
+                                <td align=right id=s8> 0,16</td>
+                            </tr>
+                        </table>
+
+                    </td>
+                    <td width=20>&nbsp;</td>
+                </tr>
+            </table>
+            <br>
+            <table width=100% height=45 cellspacing=0 cellpadding=0 border=0>
+                <tr>
+                    <td height=40 width=30><img src="../static/obrazy/p.gif" width=30 height=40></td>
+                    <td width=100% height=40 id=h0>Frekwencja</td>
+                </tr>
+                <tr>
+                    <td colspan=2 height=13 background="../static/obrazy/linia.gif" id=p>&nbsp;</td>
+                </tr>
+            </table>
+            <center><img src="../static/obrazy/pwf.gif" border=0><img src="../static/obrazy/31.png" alt="Legenda" border=0>
+            </center>
+            <br>
+            <table width=100% cellspacing=2 cellpadding=1 border=0>
+                <tr>
+                    <td><img src="../static/obrazy/p.gif" width=30></td>
+                    <td width=100%>
+                        <table border=0 width=100%>
+                            <tr>
+                                <td valign=top width=33%><a href="http://prezydent2000.pkw.gov.pl/wb/woj/020000.html">WOJ.
+                                    DOLNO�L�SKIE</a><br><a href="http://prezydent2000.pkw.gov.pl/wb/woj/040000.html">WOJ.
+                                    KUJAWSKO-POMORSKIE</a><br><a
+                                        href="http://prezydent2000.pkw.gov.pl/wb/woj/060000.html">WOJ. LUBELSKIE</a><br>
+                                    <a
+                                            href="http://prezydent2000.pkw.gov.pl/wb/woj/080000.html">WOJ.
+                                        LUBUSKIE</a><br><a href="http://prezydent2000.pkw.gov.pl/wb/woj/100000.html">WOJ.
+                                        ��DZKIE</a><br></td>
+                                <td valign=top width=33%><a href="http://prezydent2000.pkw.gov.pl/wb/woj/120000.html">WOJ.
+                                    MA�OPOLSKIE</a><br><a href="http://prezydent2000.pkw.gov.pl/wb/woj/140000.html">WOJ.
+                                    MAZOWIECKIE</a><br><a href="http://prezydent2000.pkw.gov.pl/wb/woj/160000.html">WOJ.
+                                    OPOLSKIE</a><br>
+                                    <a
+                                            href="http://prezydent2000.pkw.gov.pl/wb/woj/180000.html">WOJ.
+                                        PODKARPACKIE</a><br><a
+                                            href="http://prezydent2000.pkw.gov.pl/wb/woj/200000.html">WOJ. PODLASKIE</a><br>
+                                </td>
+                                <td valign=top width=33%><a href="http://prezydent2000.pkw.gov.pl/wb/woj/220000.html">WOJ.
+                                    POMORSKIE</a><br><a href="http://prezydent2000.pkw.gov.pl/wb/woj/240000.html">WOJ.
+                                    �L�SKIE</a><br><a href="http://prezydent2000.pkw.gov.pl/wb/woj/260000.html">WOJ.
+                                    �WI�TOKRZYSKIE</a><br>
+                                    <a
+                                            href="http://prezydent2000.pkw.gov.pl/wb/woj/280000.html">WOJ.
+                                        WARMI�SKO-MAZURSKIE</a><br><a
+                                            href="http://prezydent2000.pkw.gov.pl/wb/woj/300000.html">WOJ.
+                                        WIELKOPOLSKIE</a><br><a
+                                            href="http://prezydent2000.pkw.gov.pl/wb/woj/320000.html">WOJ.
+                                        ZACHODNIOPOMORSKIE</a><br></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <table width=100% height=45 cellspacing=0 cellpadding=0 border=0>
+                <tr>
+                    <td height=40 width=30><img src="../static/obrazy/p.gif" width=30 height=40></td>
+                    <td width=100% height=40 id=h0>Statystyka og��em</td>
+                </tr>
+                <tr>
+                    <td colspan=2 height=13 background="../static/obrazy/linia.gif" id=p>&nbsp;</td>
+                </tr>
+            </table>
+            <table width=100% border=0 cellspacing=2 cellpadding=1 align=center>
+                <tr>
+                    <td><img src="../static/obrazy/p.gif" width=30 height=1></td>
+                    <td width=100%>
+                        <table width=100% border=0 cellspacing=2 cellpadding=1 align=center>
+                            <tr valign=bottom>
+                                <td id=t>Liczba uprawnionych do g�osowania</td>
+                                <td align=right id=s8>29 122 304</td>
+                            </tr>
+                            <tr>
+                                <td id=t>Liczba wydanych kart do g�osowania</td>
+                                <td align=right id=s8>17 798 791</td>
+                            </tr>
+                            <tr>
+                                <td id=t>Liczba kart wyj�tych z urny</td>
+                                <td align=right id=s8>17 789 231</td>
+                            </tr>
+                            <tr>
+                                <td id=t>Liczba wa�nych g�os�w</td>
+                                <td align=right id=s8>17 598 919</td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id=t>Liczba niewa�nych g�os�w</td>
+                                <td align=right id=s8>190 312</td>
+                            </tr>
+                            <tr>
+                                <td id=t>Frekwencja (%)</td>
+                                <td align=right id=s8> 61,12</td>
+                            </tr>
+                        </table>
+
+                    </td>
+                    <td width=20>&nbsp;</td>
+                </tr>
+            </table>
+            <br>
+</div>
+
+
+<table width=100% cellpadding=0 cellspacing=0 border=0>
+    <tr>
+        <td colspan=2 align=center><img src="../static/obrazy/p.gif" width=1 height=20></td>
+    </tr>
+    <tr>
+        <td colspan=2 align=center bgcolor=#FE0101><img src="../static/obrazy/p.gif" width=1 height=5></td>
+    </tr>
+    <tr>
+        <td colspan=2 align=center>
+        </td>
+    </tr>
+    <tr>
+        <td colspan=2 align=center><img src="../static/obrazy/p.gif" width=1 height=20></td>
+    </tr>
+</table>
+</body>
+</html>

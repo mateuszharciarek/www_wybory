@@ -1,0 +1,110 @@
+div.header_all {
+    width: 100%;
+    padding: 0 0 0 0;
+    border: 0;
+    background-color: #111E7A;
+    height: 87px;
+}
+img.aaa {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+}
+
+div.header-element{
+    height: 67px;
+    width: 337px;
+    left: 50%;
+
+    float:left;
+    border: 0;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+<!---->
+div.header-element2{
+	height: 67px;
+	text-align: center;
+	align-content: center;
+    align-items: center;
+    vertical-align: middle;
+
+}
+
+div.header-element3{
+    width: calc(100% - 337px);
+    float: left;
+    background-color: green;
+    height: 5px;
+}
+<!---->
+
+div.line1{
+    height: 5px;
+    width: 100%;
+    background-color: white;
+}
+
+div.line2{
+    height: 5px;
+    width: 100%;
+    background-color: #FE0000;
+}
+
+div.line3{
+    height: 15px;
+    width: 100%;
+    background-color: white;
+}
+
+div.main{
+    width: 100%;
+    border: 0;
+}
+
+a.my_text{
+    text-decoration: none;
+    color: black;
+    padding: 50px;
+    font-size: 200%;
+}
+
+
+p {
+    padding: 5px;
+    margin-left: 20px;
+    font-size: 125%;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .aaa{display:none; (or) visibility:hidden;}
+}
+
+
+
+/* =Nav
+-------------------------------------------------------------- */
+ul.menu {
+	background-color: red;
+	text-align: center;
+}
+
+.menu li {
+	width: 200px;
+    padding: 10px;
+    display:inline-block;
+}
+
+.menu a.link {
+	display: block;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+}
+
+.menu a.link:hover {
+	background-color: white;
+	color: red;
+}
