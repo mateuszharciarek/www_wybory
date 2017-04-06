@@ -1,16 +1,6 @@
 #!/usr/bin/env python
 import os
 import sys
-import xlrd
-# ----------------------------------------------------------------------
-def open_file(path):
-    book = xlrd.open_workbook(path)
-    first_sheet = book.sheet_by_index(0)
-    cell = first_sheet.cell(0, 0)
-
-
-# ----------------------------------------------------------------------
-
 
 
 if __name__ == "__main__":
@@ -30,6 +20,4 @@ if __name__ == "__main__":
                 "forget to activate a virtual environment?"
             )
         raise
-    path = "dane/gm-okr01.xls"
-    open_file(path)
     execute_from_command_line(sys.argv)

@@ -43,16 +43,18 @@
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
+
+        var points = [];
+
+
       google.charts.load("current", {packages:["corechart"]});
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
           var data = google.visualization.arrayToDataTable([
               ['kandydat', 'procent głosów'],
-              ['Work', 11],
-              ['Eat', 2],
-              ['Commute', 2],
-              ['Watch TV', 2],
-              ['Sleep', 7]
+              {% for item1,item2 in lista %}
+                ['{{ item1 }}',{{ item2 }}],
+              {% endfor %}
           ]);
 
           var options = {
@@ -64,14 +66,13 @@
       }
 
     </script>
-    <div id="piechart_3d" style="width: 900px; height: 400px;"></div>
+    <div id="piechart_3d" style="width: 900px; height: 400px;display: block; margin: 0 auto;"></div>
 
-            <center><img src="../static/obrazy/kd.png" border=0></center>
             <br>
             <table width=100% height=45 cellspacing=0 cellpadding=0 border=0>
                 <tr>
                     <td height=40 width=30><img src="../static/obrazy/p.gif" width=30 height=40></td>
-                    <td width=100% height=40 id=h0>Wyniki poszczeg�lnych kandydat�w</td>
+                    <td width=100% height=40 id=h0>Wyniki poszczególnych kandydatów</td>
                 </tr>
                 <tr>
                     <td colspan=2 height=13 background="../static/obrazy/linia.gif" id=p>&nbsp;</td>

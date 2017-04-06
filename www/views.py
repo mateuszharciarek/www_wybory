@@ -1,19 +1,51 @@
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response
+import xlrd
 
-# Create your views here.
+
 def index(request):
-    return render(request, 'index.html', {})
+    path = "dane/zal2.xls"
+    book = xlrd.open_workbook(path)
+    first_sheet = book.sheet_by_index(0)
+
+    tmp = []
+    wyniki = []
+    ludzie = []
+    razem = 0
+
+    for i in range(3, 27):
+        if i % 2 != 0:
+            tmp.append(first_sheet.cell(6, i).value)
+            razem += first_sheet.cell(6, i).value
+
+    for i in range(3, 27):
+        if i % 2 != 0:
+            ludzie.append(first_sheet.cell(4, i).value)
+
+    for i in tmp:
+        wyniki.append(i / razem * 100)
+
+    lista = []
+    for i in range(3, 27):
+        if i % 2 != 0:
+            war = (first_sheet.cell(4, i), first_sheet.cell(6, i).value)
+            lista.append(war)
+
+    lista.sort(key=lambda tup: tup[1])
+    return render_to_response('index.html', {'lista': lista})
+
 
 def test(request):
-    return render(request, 'template.html', {})
+    path = "dane/zal2.xls"
+    book = xlrd.open_workbook(path)
+    first_sheet = book.sheet_by_index(0)
 
+    ludzie = []
+    wyniki = []
+    for i in range(3, 25):
+        if i % 2 != 0:
+            wyniki.append(first_sheet.cell(4, i).value)
+    for i in range(3, 25):
+        if i % 2 == 0:
+            ludzie.append(first_sheet.cell(6, i).value)
 
-from flask import Flask, render_template
-app = Flask(__name__)
-
-@app.route("/")
-def template_test():
-    return render_template('template.html', my_string="Wheeeee!", my_list=[0,1,2,3,4,5])
-
-if __name__ == '__main__':
-    app.run(debug=True)
+    return render_to_response('template.html', {'wyniki': wyniki}, {'ludzie': ludzie})
